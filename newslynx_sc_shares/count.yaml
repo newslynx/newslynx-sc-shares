@@ -3,7 +3,7 @@ name: Timeseries Share Counts for Content Items
 description: >
     Computes a timeseries of share counts for an organization's 
     content items.
-runs: newslynx_sc_socialshares.ContentTimeseriesCounts
+runs: newslynx_sc_shares.Counts
 creates: 'null'
 options:
     

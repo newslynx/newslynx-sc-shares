@@ -2,7 +2,7 @@ from datetime import timedelta
 
 from newslynx.lib import dates
 from newslynx.sc import SousChef
-from newslynx_sc_socialshares import socialshares
+from .common import share_counts
 
 
 class ContentTimeseriesCounts(SousChef):
@@ -28,7 +28,7 @@ class ContentTimeseriesCounts(SousChef):
                     continue
                 url = content_item.get('url')
                 if url:
-                    data = socialshares.count(url)
+                    data = share_counts(url)
                     data.pop('url', None)
                     data['content_item_id'] = content_item.get('id')
                     yield data
@@ -48,8 +48,11 @@ class Counts(SousChef):
     """
 
     def run(self):
+        self.log.info('Fetching counts for {}'.format(self.options['urls']))
         urls = self.options.get('urls', [])
         if not isinstance(urls, list):
             urls = urls.split(',')
         for u in urls:
-            yield socialshares.count(u)
+            d = share_counts(u)
+            d['url'] = u
+            yield d

@@ -3,7 +3,7 @@ name: Timeseries Share Counts for Content Items
 description: >
     Computes a timeseries of share counts for an organization's 
     content items.
-runs: newslynx_sc_socialshares.ContentTimeseriesCounts
+runs: newslynx_sc_shares.ContentTimeseriesCounts
 creates: metrics
 option_order: []
 options:
@@ -36,27 +36,6 @@ options:
             placeholder: all
             description: |
                 The content item types to calculate share counts for.
-
-    sources:
-        input_type: checkbox
-        input_options:
-            - twitter
-            - facebookfql
-            - reddit
-            - linkedin
-            - facebook 
-            - pinterest
-            - googleplus
-            - all
-        value_types:
-            - string
-        accepts_list: true 
-        default: all
-        help:
-            placeholder: all 
-            description: |
-                The sources to gather share counts from.
-
 
 metrics:
 
