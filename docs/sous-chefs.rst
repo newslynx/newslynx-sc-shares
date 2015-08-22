@@ -257,19 +257,18 @@ Metrics
 
 
 
-Timeseries Share Counts for Content Items
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Share counts for arbitrary urls.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Computes a timeseries of share counts for an organization's content
-   items.
+-  Accepts a list of urls and returns their share counts.
 -  This Sous Chef runs the python module ``newslynx_sc_shares.Counts``.
--  API Slug: ``share-counts-to-content-timeseries``
+-  API Slug: ``share-counts-for-urls``
 
 Development
 ^^^^^^^^^^^
 
-Pass runtime options to ``share-counts-to-content-timeseries`` and
-stream output. **NOTE** Will not execute the SousChef's ``load`` method.
+Pass runtime options to ``share-counts-for-urls`` and stream output.
+**NOTE** Will not execute the SousChef's ``load`` method.
 
 .. code:: bash
 
@@ -294,13 +293,13 @@ Create a Recipe with this Sous Chef with command line options.
 
 .. code:: bash
 
-    $ newslynx api recipes create sous_chef=share-counts-to-content-timeseries **options
+    $ newslynx api recipes create sous_chef=share-counts-for-urls **options
 
 Alerternatively pass in a recipe file.
 
 .. code:: bash
 
-    $ newslynx api recipes create sous_chef=share-counts-to-content-timeseries --data=recipe.yaml
+    $ newslynx api recipes create sous_chef=share-counts-for-urls --data=recipe.yaml
 
 Save the outputted ``id`` of this recipe, and execute it via the API.
 **NOTE** This will place the recipe in a task queue.
@@ -320,8 +319,8 @@ method.
 Options
 ^^^^^^^
 
-In addition to default recipe options,
-``share-counts-to-content-timeseries`` also accepts the following
+In addition to default recipe options, ``share-counts-for-urls`` also
+accepts the following
 
 -  ``urls``
 
@@ -354,7 +353,7 @@ In addition to default recipe options,
 Metrics
 ^^^^^^^
 
-``share-counts-to-content-timeseries`` generates the following Metrics
+``share-counts-for-urls`` generates the following Metrics
 
 -  ``facebook_shares``
 
