@@ -9,7 +9,7 @@ Timeseries Share Counts for Content Items
 -  Computes a timeseries of share counts for an organization's content
    items.
 -  This Sous Chef runs the python module
-   ``newslynx_sc_socialshares.ContentTimeseriesCounts``.
+   ``newslynx_sc_shares.ContentTimeseriesCounts``.
 -  API Slug: ``share-counts-to-content-timeseries``
 
 Development
@@ -89,26 +89,6 @@ In addition to default recipe options,
       -  ``slideshow``
       -  ``interactive``
       -  ``podcast``
-      -  ``all``
-
-   -  Accepts inputs of type:
-
-      -  ``string``
-
-   -  Defaults to ``all``
-
--  ``sources``
-
-   -  Should be rendered with a ``checkbox`` form.
-   -  Choose from:
-
-      -  ``twitter``
-      -  ``facebookfql``
-      -  ``reddit``
-      -  ``linkedin``
-      -  ``facebook``
-      -  ``pinterest``
-      -  ``googleplus``
       -  ``all``
 
    -  Accepts inputs of type:
@@ -282,8 +262,7 @@ Timeseries Share Counts for Content Items
 
 -  Computes a timeseries of share counts for an organization's content
    items.
--  This Sous Chef runs the python module
-   ``newslynx_sc_socialshares.ContentTimeseriesCounts``.
+-  This Sous Chef runs the python module ``newslynx_sc_shares.Counts``.
 -  API Slug: ``share-counts-to-content-timeseries``
 
 Development
