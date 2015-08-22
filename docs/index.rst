@@ -1,4 +1,4 @@
-|travis-img| |Documentation Status|
+|Build status| |Documentation Status|
 
 newslynx-sc-shares
 ==================
@@ -152,8 +152,10 @@ What's in this module ?
 
    -  ``nose`` tests for ``newslynx-sc-shares``
 
-.. |travis-img| image:: https://travis-ci.org/newslynx/newslynx-sc-shares.svg
+.. |Build status| image:: https://travis-ci.org/newslynx/newslynx-sc-shares.svg
+   :target: https://travis-ci.org/newslynx/newslynx-sc-shares
 .. |Documentation Status| image:: https://readthedocs.org/projects/newslynx-sc-shares/badge/?version=latest
+   :target: https://readthedocs.org/projects/newslynx-sc-shares/?badge=latest
 
 Contents
 --------
