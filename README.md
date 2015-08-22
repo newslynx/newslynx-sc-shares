@@ -1,4 +1,5 @@
-![travis-img](https://travis-ci.org/newslynx/newslynx-sc-shares.svg)
+![travis-img](https://travis-ci.org/newslynx/newslynx-sc-shares.svg) ![Documentation Status](https://readthedocs.org/projects/newslynx-sc-shares/badge/?version=latest)
+
 newslynx-sc-shares
 ==========================================================================================
 

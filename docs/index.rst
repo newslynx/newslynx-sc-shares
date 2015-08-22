@@ -1,5 +1,7 @@
-|travis-img| newslynx-sc-shares
-==========================================================================================
+|travis-img| |Documentation Status|
+
+newslynx-sc-shares
+==================
 
 This module contains all Sous Chefs which deal with share counts
 
@@ -151,6 +153,7 @@ What's in this module ?
    -  ``nose`` tests for ``newslynx-sc-shares``
 
 .. |travis-img| image:: https://travis-ci.org/newslynx/newslynx-sc-shares.svg
+.. |Documentation Status| image:: https://readthedocs.org/projects/newslynx-sc-shares/badge/?version=latest
 
 Contents
 --------
