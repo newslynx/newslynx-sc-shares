@@ -1,8 +1,7 @@
-slug: share-counts-to-content-timeseries
-name: Timeseries Share Counts for Content Items
+slug: share-counts-for-urls
+name: Share counts for arbitrary urls.
 description: >
-    Computes a timeseries of share counts for an organization's 
-    content items.
+    Accepts a list of urls and returns their share counts.
 runs: newslynx_sc_shares.Counts
 creates: 'null'
 options:
