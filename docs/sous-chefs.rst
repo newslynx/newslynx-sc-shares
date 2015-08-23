@@ -3,6 +3,7 @@ Sous Chefs
 -------------
 **newslynx-sc-shares** provides access to the following Sous Chefs
 
+RUNS newslynx_sc_shares.ContentTimeseriesCounts
 Timeseries Share Counts for Content Items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -262,6 +263,7 @@ Metrics
 
 
 
+RUNS newslynx_sc_shares.Counts
 Share counts for arbitrary urls.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
