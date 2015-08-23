@@ -72,6 +72,9 @@ In addition to default recipe options,
 
 -  ``days``
 
+   -  The number of days past a content item's creation date after which
+      we will stop computing these counts.
+
    -  Should be rendered with a ``number`` form.
    -  Accepts inputs of type:
 
@@ -80,6 +83,8 @@ In addition to default recipe options,
    -  Defaults to ``30``
 
 -  ``content_item_types``
+
+   -  The content item types to calculate share counts for.
 
    -  Should be rendered with a ``checkbox`` form.
    -  Choose from:
@@ -324,6 +329,9 @@ accepts the following
 
 -  ``urls``
 
+   -  The number of days past a content item's creation date after which
+      we will stop computing these counts.
+
    -  **Required**
    -  Should be rendered with a ``text`` form.
    -  Accepts inputs of type:
@@ -331,6 +339,8 @@ accepts the following
       -  ``string``
 
 -  ``sources``
+
+   -  The sources to gather share counts from.
 
    -  Should be rendered with a ``checkbox`` form.
    -  Choose from:
