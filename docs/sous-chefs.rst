@@ -12,22 +12,6 @@ Timeseries Share Counts for Content Items
    ``newslynx_sc_shares.ContentTimeseriesCounts``.
 -  API Slug: ``share-counts-to-content-timeseries``
 
-Development
-^^^^^^^^^^^
-
-Pass runtime options to ``share-counts-to-content-timeseries`` and
-stream output. **NOTE** Will not execute the SousChef's ``load`` method.
-
-.. code:: bash
-
-    $ newslynx sc newslynx_sc_shares/content_timeseries.yaml option=value1
-
-Alternatively pass in a recipe file
-
-.. code:: bash
-
-    $ newslynx sc newslynx_sc_shares/content_timeseries.yaml --recipe=recipe.yaml
-
 API Usage
 ^^^^^^^^^
 
@@ -63,6 +47,22 @@ method.
 .. code:: bash
 
     $ newslynx api recipes cook id=<id> --passthrough **options
+
+Development
+^^^^^^^^^^^
+
+Pass runtime options to ``share-counts-to-content-timeseries`` and
+stream output. **NOTE** Will not execute the SousChef's ``load`` method.
+
+.. code:: bash
+
+    $ newslynx sc newslynx_sc_shares/content_timeseries.yaml option=value1
+
+Alternatively pass in a recipe file
+
+.. code:: bash
+
+    $ newslynx sc newslynx_sc_shares/content_timeseries.yaml --recipe=recipe.yaml
 
 Options
 ^^^^^^^
@@ -269,22 +269,6 @@ Share counts for arbitrary urls.
 -  This Sous Chef runs the python module ``newslynx_sc_shares.Counts``.
 -  API Slug: ``share-counts-for-urls``
 
-Development
-^^^^^^^^^^^
-
-Pass runtime options to ``share-counts-for-urls`` and stream output.
-**NOTE** Will not execute the SousChef's ``load`` method.
-
-.. code:: bash
-
-    $ newslynx sc newslynx_sc_shares/count.yaml option=value1
-
-Alternatively pass in a recipe file
-
-.. code:: bash
-
-    $ newslynx sc newslynx_sc_shares/count.yaml --recipe=recipe.yaml
-
 API Usage
 ^^^^^^^^^
 
@@ -320,6 +304,22 @@ method.
 .. code:: bash
 
     $ newslynx api recipes cook id=<id> --passthrough **options
+
+Development
+^^^^^^^^^^^
+
+Pass runtime options to ``share-counts-for-urls`` and stream output.
+**NOTE** Will not execute the SousChef's ``load`` method.
+
+.. code:: bash
+
+    $ newslynx sc newslynx_sc_shares/count.yaml option=value1
+
+Alternatively pass in a recipe file
+
+.. code:: bash
+
+    $ newslynx sc newslynx_sc_shares/count.yaml --recipe=recipe.yaml
 
 Options
 ^^^^^^^
