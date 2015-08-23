@@ -3,8 +3,6 @@
 newslynx-sc-shares
 ==================
 
-This module contains all Sous Chefs which deal with share counts
-
 Installation
 ------------
 
@@ -24,8 +22,8 @@ Requires ``nose``
 
     $ nosetests
 
-Documenation
-------------
+Documentation
+-------------
 
 Documentation for ``newslynx-sc-shares`` is hosted on `Read The
 Docs <http://newslynx-sc-shares.readthedocs.org/>`__.
@@ -39,7 +37,7 @@ It's generated via the following steps
    documentation for all the Sous Chefs in ``newslynx-sc-shares`` and
    saves the output to
    `docs/sous-chefs.rst <https://github.com/newslynx/newslynx-sc-shares/blob/master/docs/sous-chefs.rst>`__
--  Builds Sphinx Documentaiton from these files.
+-  Builds Sphinx Documentation from these files.
 
 Continuous Integration
 ----------------------
@@ -78,7 +76,7 @@ What's in this module ?
 -  `setup.py <https://github.com/newslynx/newslynx-sc-shares/blob/master/setup.py>`__
 
    -  Specification's for building ``newslynx-sc-shares``'s PyPI
-      dsitribution.
+      distribution.
 
 -  `.travis.yml <https://github.com/newslynx/newslynx-sc-shares/blob/master/.travis.yml>`__
 
@@ -155,7 +153,7 @@ What's in this module ?
 .. |Build status| image:: https://travis-ci.org/newslynx/newslynx-sc-shares.svg
    :target: https://travis-ci.org/newslynx/newslynx-sc-shares
 .. |Documentation Status| image:: https://readthedocs.org/projects/newslynx-sc-shares/badge/?version=latest
-   :target: http://newslynx-sc-shares.readthedocs.org/
+   :target: https://readthedocs.org/projects/newslynx-sc-shares/?badge=latest
 
 Contents
 --------
