@@ -13,6 +13,9 @@ class ContentTimeseriesCounts(SousChef):
     timeout = 1000
 
     def setup(self):
+        """
+        
+        """
         max_age = self.options.get('max_age')
         if max_age:
             self.max_age = dates.now() - timedelta(days=max_age)
@@ -24,17 +27,16 @@ class ContentTimeseriesCounts(SousChef):
         Count shares for content items.
         """
         # Count shares for all content items up to a max age.
-        if not len(self.urls):
-            for content_item in self.api.orgs.simple_content():
-                created = dates.parse_iso(content_item['created'])
-                if created < self.max_age:
-                    continue
-                url = content_item.get('url')
-                if url:
-                    data = share_counts(url)
-                    data.pop('url', None)
-                    data['content_item_id'] = content_item.get('id')
-                    yield data
+        for content_item in self.api.orgs.simple_content():
+            created = dates.parse_iso(content_item['created'])
+            if created < self.max_age:
+                continue
+            url = content_item.get('url')
+            if url:
+                data = share_counts(url)
+                data.pop('url', None)
+                data['content_item_id'] = content_item.get('id')
+                yield data
 
     def load(self, data):
         """
