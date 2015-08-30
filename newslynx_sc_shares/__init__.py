@@ -1,4 +1,5 @@
 from datetime import timedelta, datetime
+import pytz
 
 from newslynx.lib import dates
 from newslynx.sc import SousChef
@@ -14,13 +15,13 @@ class ContentTimeseriesCounts(SousChef):
 
     def setup(self):
         """
-        
+        parse max age argument.
         """
         max_age = self.options.get('max_age')
         if max_age:
             self.max_age = dates.now() - timedelta(days=max_age)
         else:
-            self.max_age = datetime(1900, 1, 1)
+            self.max_age = datetime(1900, 1, 1, tzinfo=pytz.UTC)
 
     def run(self):
         """
