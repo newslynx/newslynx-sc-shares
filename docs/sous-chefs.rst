@@ -12,31 +12,57 @@ Timeseries Share Counts for Content Items
    ``newslynx_sc_shares.ContentTimeseriesCounts``.
 -  API Slug: ``share-counts-to-content-timeseries``
 
-API Usage
-^^^^^^^^^
+Usage
+^^^^^
+
+Standalone
+''''''''''
+
+Run this Sous Chef via the api, passing in arbitrary runtime options,
+and stream it's output.
+
+.. code:: shell
+
+    $ newslynx api sous-chefs cook -d=newslynx_sc_shares/content_timeseries.yaml --passthrough **options
+
+Run this Sous Chef via the api, and if applicable, send it's output to
+bulkload.
+
+.. code:: shell
+
+    $ newslynx api sous-chefs cook -d=newslynx_sc_shares/content_timeseries.yaml **options
+
+Do either of the above two, but pass in a recipe file
+
+.. code:: shell
+
+    $ newslynx api sous-chefs cook -d=recipe.yaml
+
+Recipes
+'''''''
 
 Add this Sous Chef to your authenticated org
 
-.. code:: bash
+.. code:: shell
 
     $ newslynx api sous-chefs create -d=newslynx_sc_shares/content_timeseries.yaml
 
 Create a Recipe with this Sous Chef with command line options.
 
-.. code:: bash
+.. code:: shell
 
     $ newslynx api recipes create sous_chef=share-counts-to-content-timeseries **options
 
 Alternatively pass in a recipe file.
 
-.. code:: bash
+.. code:: shell
 
     $ newslynx api recipes create sous_chef=share-counts-to-content-timeseries --data=recipe.yaml
 
 Save the outputted ``id`` of this recipe, and execute it via the API.
 **NOTE** This will place the recipe in a task queue.
 
-.. code:: bash
+.. code:: shell
 
     $ newslynx api recipes cook id=<id>
 
@@ -44,25 +70,25 @@ Alternatively, run the Recipe, passing in arbitrary runtime options, and
 stream it's output: **NOTE** Will not execute the SousChef's ``load``
 method.
 
-.. code:: bash
+.. code:: shell
 
     $ newslynx api recipes cook id=<id> --passthrough **options
 
 Development
-^^^^^^^^^^^
+'''''''''''
 
 Pass runtime options to ``share-counts-to-content-timeseries`` and
 stream output. **NOTE** Will not execute the SousChef's ``load`` method.
 
-.. code:: bash
+.. code:: shell
 
-    $ newslynx sc newslynx_sc_shares/content_timeseries.yaml option=value1
+    $ newslynx sc-run newslynx_sc_shares/content_timeseries.yaml option=value1
 
 Alternatively pass in a recipe file
 
-.. code:: bash
+.. code:: shell
 
-    $ newslynx sc newslynx_sc_shares/content_timeseries.yaml --recipe=recipe.yaml
+    $ newslynx sc-run newslynx_sc_shares/content_timeseries.yaml --recipe=recipe.yaml
 
 Options
 ^^^^^^^
@@ -269,31 +295,57 @@ Share counts for arbitrary urls.
 -  This Sous Chef runs the python module ``newslynx_sc_shares.Counts``.
 -  API Slug: ``share-counts-for-urls``
 
-API Usage
-^^^^^^^^^
+Usage
+^^^^^
+
+Standalone
+''''''''''
+
+Run this Sous Chef via the api, passing in arbitrary runtime options,
+and stream it's output.
+
+.. code:: shell
+
+    $ newslynx api sous-chefs cook -d=newslynx_sc_shares/count.yaml --passthrough **options
+
+Run this Sous Chef via the api, and if applicable, send it's output to
+bulkload.
+
+.. code:: shell
+
+    $ newslynx api sous-chefs cook -d=newslynx_sc_shares/count.yaml **options
+
+Do either of the above two, but pass in a recipe file
+
+.. code:: shell
+
+    $ newslynx api sous-chefs cook -d=recipe.yaml
+
+Recipes
+'''''''
 
 Add this Sous Chef to your authenticated org
 
-.. code:: bash
+.. code:: shell
 
     $ newslynx api sous-chefs create -d=newslynx_sc_shares/count.yaml
 
 Create a Recipe with this Sous Chef with command line options.
 
-.. code:: bash
+.. code:: shell
 
     $ newslynx api recipes create sous_chef=share-counts-for-urls **options
 
 Alternatively pass in a recipe file.
 
-.. code:: bash
+.. code:: shell
 
     $ newslynx api recipes create sous_chef=share-counts-for-urls --data=recipe.yaml
 
 Save the outputted ``id`` of this recipe, and execute it via the API.
 **NOTE** This will place the recipe in a task queue.
 
-.. code:: bash
+.. code:: shell
 
     $ newslynx api recipes cook id=<id>
 
@@ -301,25 +353,25 @@ Alternatively, run the Recipe, passing in arbitrary runtime options, and
 stream it's output: **NOTE** Will not execute the SousChef's ``load``
 method.
 
-.. code:: bash
+.. code:: shell
 
     $ newslynx api recipes cook id=<id> --passthrough **options
 
 Development
-^^^^^^^^^^^
+'''''''''''
 
 Pass runtime options to ``share-counts-for-urls`` and stream output.
 **NOTE** Will not execute the SousChef's ``load`` method.
 
-.. code:: bash
+.. code:: shell
 
-    $ newslynx sc newslynx_sc_shares/count.yaml option=value1
+    $ newslynx sc-run newslynx_sc_shares/count.yaml option=value1
 
 Alternatively pass in a recipe file
 
-.. code:: bash
+.. code:: shell
 
-    $ newslynx sc newslynx_sc_shares/count.yaml --recipe=recipe.yaml
+    $ newslynx sc-run newslynx_sc_shares/count.yaml --recipe=recipe.yaml
 
 Options
 ^^^^^^^
