@@ -205,7 +205,9 @@ class GooglePlus(ShareCount):
             return None
 
     def parse(self, data):
-        cnt = int(data['result']['metadata']['globalCounts']['count'])
+        cnt = 0
+        if 'result' in data:
+            cnt = int(data['result']['metadata']['globalCounts']['count'])
         return {
             'googleplus_shares': cnt
         }
